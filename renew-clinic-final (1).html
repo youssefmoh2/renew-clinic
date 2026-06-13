@@ -1,0 +1,2345 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="رينيو كلينك – عيادة الجلدية والتجميل والليزر في حولي، الكويت. احجزي موعدك اليوم." />
+  <meta name="keywords" content="رينيو كلينك, عيادة جلدية, تجميل, ليزر, الكويت, حولي, بوتوكس, فيلر" />
+  <title>رينيو كلينك | للجلدية والتجميل والليزر – حولي، الكويت</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* =============================================
+       DESIGN TOKENS – RENEW CLINIC
+    ============================================= */
+    :root {
+      --olive:        #6B7C41;
+      --olive-dark:   #526030;
+      --olive-light:  #8A9E52;
+      --olive-pale:   #EEF1E6;
+      --olive-muted:  #D6DDBF;
+
+      --cream:        #FAFAF7;
+      --white:        #FFFFFF;
+      --off-white:    #F5F5F0;
+
+      --ink:          #1C1C1C;
+      --ink-muted:    #5A5A5A;
+      --ink-light:    #8A8A8A;
+
+      --accent-red:   #C0392B;
+      --accent-sand:  #E8E0D0;
+
+      --shadow-sm:    0 2px 10px rgba(107,124,65,0.08);
+      --shadow-md:    0 6px 30px rgba(107,124,65,0.12);
+      --shadow-lg:    0 16px 60px rgba(107,124,65,0.16);
+
+      --radius-sm:    10px;
+      --radius-md:    18px;
+      --radius-lg:    28px;
+      --radius-xl:    40px;
+
+      --font-display: 'Cairo', sans-serif;
+      --font-body:    'Noto Naskh Arabic', serif;
+
+      --transition:   0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* =============================================
+       RESET & BASE
+    ============================================= */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--cream);
+      color: var(--ink);
+      direction: rtl;
+      text-align: right;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img { display: block; max-width: 100%; }
+    a  { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* =============================================
+       TYPOGRAPHY HELPERS
+    ============================================= */
+    .section-eyebrow {
+      font-family: var(--font-display);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      color: var(--olive);
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .section-eyebrow::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 2px;
+      background: var(--olive);
+      border-radius: 2px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+      font-weight: 800;
+      color: var(--ink);
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--ink-muted);
+      max-width: 580px;
+      line-height: 1.8;
+    }
+
+    section { padding: 90px 0; }
+
+    /* =============================================
+       BUTTONS
+    ============================================= */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.95rem;
+      border-radius: 50px;
+      padding: 14px 32px;
+      cursor: pointer;
+      border: none;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--olive);
+      color: var(--white);
+      box-shadow: 0 4px 20px rgba(107,124,65,0.35);
+    }
+    .btn-primary:hover {
+      background: var(--olive-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(107,124,65,0.45);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--olive);
+      border: 2px solid var(--olive);
+    }
+    .btn-outline:hover {
+      background: var(--olive-pale);
+      transform: translateY(-2px);
+    }
+
+    .btn-wa {
+      background: #25D366;
+      color: var(--white);
+      box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+    }
+    .btn-wa:hover {
+      background: #1db954;
+      transform: translateY(-2px);
+    }
+
+    .btn-ghost {
+      background: rgba(255,255,255,0.15);
+      color: var(--white);
+      border: 1.5px solid rgba(255,255,255,0.4);
+    }
+    .btn-ghost:hover {
+      background: rgba(255,255,255,0.25);
+    }
+
+    /* =============================================
+       HEADER / NAV
+    ============================================= */
+    #header {
+      position: fixed;
+      top: 0; right: 0; left: 0;
+      z-index: 1000;
+      transition: background var(--transition), box-shadow var(--transition);
+      padding: 0;
+    }
+
+    #header.scrolled {
+      background: rgba(250,250,247,0.96);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 2px 24px rgba(107,124,65,0.10);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+      gap: 24px;
+    }
+
+    /* LOGO */
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .logo-mark {
+      width: 46px;
+      height: 46px;
+      background: var(--olive);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .logo-mark svg { width: 26px; height: 26px; }
+
+    .logo-text-wrap { display: flex; flex-direction: column; line-height: 1.2; }
+
+    .logo-en {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--olive);
+      letter-spacing: 0.06em;
+    }
+
+    .logo-ar {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+    }
+
+    /* NAV LINKS */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 0.88rem;
+      color: var(--ink-muted);
+      transition: color var(--transition);
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; right: 0; left: 0;
+      height: 2px;
+      background: var(--olive);
+      border-radius: 2px;
+      transform: scaleX(0);
+      transition: transform var(--transition);
+      transform-origin: right;
+    }
+
+    .nav-links a:hover { color: var(--olive); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+
+    /* hamburger */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 6px;
+      background: none;
+      border: none;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--olive);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+
+    /* Mobile nav */
+    .nav-mobile {
+      display: none;
+      flex-direction: column;
+      background: var(--white);
+      padding: 20px 24px;
+      gap: 16px;
+      border-top: 1px solid var(--olive-muted);
+    }
+
+    .nav-mobile a {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--ink);
+      padding: 8px 0;
+      border-bottom: 1px solid var(--accent-sand);
+      transition: color var(--transition);
+    }
+    .nav-mobile a:hover { color: var(--olive); }
+
+    /* =============================================
+       HERO
+    ============================================= */
+    #hero {
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 120px 0 80px;
+      background: linear-gradient(145deg, #F7F8F3 0%, #EEF1E6 40%, #E8EDD8 100%);
+    }
+
+    .hero-bg-circle {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero-bg-circle-1 {
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(107,124,65,0.08) 0%, transparent 70%);
+      top: -150px; left: -150px;
+    }
+    .hero-bg-circle-2 {
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(107,124,65,0.06) 0%, transparent 70%);
+      bottom: -100px; right: 10%;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 60px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--white);
+      border: 1.5px solid var(--olive-muted);
+      border-radius: 50px;
+      padding: 6px 18px;
+      font-family: var(--font-display);
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--olive);
+      margin-bottom: 24px;
+    }
+    .hero-badge .dot {
+      width: 7px; height: 7px;
+      background: var(--olive);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 800;
+      line-height: 1.25;
+      color: var(--ink);
+      margin-bottom: 20px;
+    }
+
+    .hero-title span {
+      color: var(--olive);
+      position: relative;
+    }
+
+    .hero-title span::after {
+      content: '';
+      position: absolute;
+      bottom: 4px; right: 0; left: 0;
+      height: 4px;
+      background: var(--olive-muted);
+      border-radius: 4px;
+      z-index: -1;
+    }
+
+    .hero-subtitle {
+      font-size: 1.05rem;
+      color: var(--ink-muted);
+      line-height: 1.85;
+      margin-bottom: 32px;
+      max-width: 480px;
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 36px;
+    }
+    .hero-meta-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--olive-pale);
+      border-radius: 50px;
+      padding: 5px 14px;
+      font-family: var(--font-display);
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--olive-dark);
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+      padding-top: 32px;
+      border-top: 1px solid var(--olive-muted);
+    }
+
+    .hero-stat-num {
+      font-family: var(--font-display);
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: var(--olive);
+      line-height: 1;
+    }
+    .hero-stat-label {
+      font-size: 0.82rem;
+      color: var(--ink-light);
+      margin-top: 4px;
+    }
+
+    /* Hero visual */
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-card-stack {
+      position: relative;
+      width: 380px;
+      height: 460px;
+    }
+
+    .hero-main-card {
+      position: absolute;
+      inset: 0;
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 40px;
+      gap: 20px;
+    }
+
+    .clinic-logo-hero {
+      width: 110px;
+      height: 110px;
+      background: linear-gradient(135deg, var(--olive) 0%, var(--olive-light) 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 40px rgba(107,124,65,0.3);
+    }
+
+    .clinic-logo-hero svg { width: 60px; height: 60px; }
+
+    .hero-card-clinic-name {
+      text-align: center;
+    }
+    .hero-card-clinic-name h2 {
+      font-family: var(--font-display);
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: var(--olive);
+    }
+    .hero-card-clinic-name h2 span {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--ink-light);
+      display: block;
+      margin-top: 2px;
+    }
+    .hero-card-tag {
+      background: var(--olive-pale);
+      color: var(--olive-dark);
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 0.82rem;
+      padding: 8px 20px;
+      border-radius: 50px;
+      text-align: center;
+    }
+    .hero-card-location {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      color: var(--ink-muted);
+    }
+
+    .hero-floating-badge {
+      position: absolute;
+      background: var(--white);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-display);
+      animation: float 3s ease-in-out infinite;
+    }
+    .hero-floating-badge-1 {
+      bottom: 60px;
+      left: -60px;
+      animation-delay: 0s;
+    }
+    .hero-floating-badge-2 {
+      top: 60px;
+      left: -70px;
+      animation-delay: 1.5s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .floating-badge-icon {
+      width: 38px; height: 38px;
+      background: var(--olive-pale);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .floating-badge-text strong {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .floating-badge-text span {
+      font-size: 0.72rem;
+      color: var(--ink-light);
+    }
+
+    /* =============================================
+       ABOUT SECTION
+    ============================================= */
+    #about {
+      background: var(--white);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-visual {
+      position: relative;
+    }
+
+    .about-img-main {
+      width: 100%;
+      aspect-ratio: 4/5;
+      background: linear-gradient(145deg, var(--olive-pale) 0%, var(--olive-muted) 100%);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-md);
+    }
+
+    .about-img-placeholder {
+      text-align: center;
+      color: var(--olive);
+    }
+    .about-img-placeholder svg { width: 80px; height: 80px; opacity: 0.5; margin: 0 auto 12px; }
+    .about-img-placeholder p {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 600;
+      opacity: 0.7;
+    }
+
+    .about-img-accent {
+      position: absolute;
+      bottom: -24px;
+      left: -24px;
+      width: 180px;
+      background: var(--olive);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      color: var(--white);
+      box-shadow: var(--shadow-md);
+    }
+    .about-img-accent .num {
+      font-family: var(--font-display);
+      font-size: 2.4rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+    .about-img-accent .lbl {
+      font-family: var(--font-display);
+      font-size: 0.78rem;
+      opacity: 0.85;
+      margin-top: 4px;
+    }
+
+    .about-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 36px;
+    }
+
+    .about-feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .about-feature-dot {
+      width: 10px; height: 10px;
+      background: var(--olive);
+      border-radius: 50%;
+      margin-top: 7px;
+      flex-shrink: 0;
+    }
+
+    .about-feature-text strong {
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      font-weight: 700;
+      display: block;
+      color: var(--ink);
+    }
+    .about-feature-text span {
+      font-size: 0.8rem;
+      color: var(--ink-muted);
+    }
+
+    /* =============================================
+       SERVICES
+    ============================================= */
+    #services {
+      background: var(--off-white);
+    }
+
+    .services-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 32px 28px;
+      border: 1.5px solid transparent;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      cursor: default;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(145deg, var(--olive-pale) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+
+    .service-card:hover {
+      border-color: var(--olive-muted);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
+    }
+    .service-card:hover::before { opacity: 1; }
+
+    .service-icon {
+      width: 56px; height: 56px;
+      background: var(--olive-pale);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 1;
+      transition: background var(--transition);
+    }
+
+    .service-card:hover .service-icon {
+      background: var(--olive);
+    }
+    .service-card:hover .service-icon .si { filter: brightness(0) invert(1); }
+
+    .si {
+      width: 28px; height: 28px;
+      transition: filter var(--transition);
+    }
+
+    .service-card-title {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .service-card-desc {
+      font-size: 0.88rem;
+      color: var(--ink-muted);
+      line-height: 1.7;
+      position: relative;
+      z-index: 1;
+    }
+
+    .service-card-arrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-display);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--olive);
+      margin-top: 16px;
+      position: relative;
+      z-index: 1;
+      transition: gap var(--transition);
+    }
+    .service-card:hover .service-card-arrow { gap: 10px; }
+
+    /* =============================================
+       WHY CHOOSE
+    ============================================= */
+    #why {
+      background: var(--white);
+    }
+
+    .why-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .why-card {
+      text-align: center;
+      padding: 36px 24px;
+      border-radius: var(--radius-md);
+      border: 1.5px solid var(--accent-sand);
+      transition: var(--transition);
+    }
+
+    .why-card:hover {
+      border-color: var(--olive-muted);
+      background: var(--olive-pale);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .why-icon {
+      width: 70px; height: 70px;
+      background: var(--olive-pale);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      margin: 0 auto 20px;
+      transition: background var(--transition);
+    }
+    .why-card:hover .why-icon { background: var(--olive); }
+    .why-card:hover .why-icon svg { filter: brightness(0) invert(1); }
+
+    .why-icon svg { width: 32px; height: 32px; transition: filter var(--transition); }
+
+    .why-title {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .why-desc {
+      font-size: 0.85rem;
+      color: var(--ink-muted);
+      line-height: 1.7;
+    }
+
+    /* =============================================
+       DOCTORS
+    ============================================= */
+    #doctors {
+      background: var(--white);
+    }
+
+    .doctors-header { text-align: center; margin-bottom: 56px; }
+
+    .doctors-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .doctor-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1.5px solid var(--accent-sand);
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+    .doctor-card:hover {
+      border-color: var(--olive-muted);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
+    }
+
+    .doctor-avatar {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: linear-gradient(145deg, var(--olive-pale) 0%, var(--olive-muted) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .doctor-avatar svg { width: 80px; height: 80px; opacity: 0.4; }
+
+    .doctor-info {
+      padding: 22px 24px;
+    }
+
+    .doctor-badge {
+      display: inline-block;
+      background: var(--olive-pale);
+      color: var(--olive-dark);
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 50px;
+      margin-bottom: 10px;
+    }
+
+    .doctor-name {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .doctor-title {
+      font-size: 0.85rem;
+      color: var(--ink-muted);
+    }
+
+    /* =============================================
+       GALLERY
+    ============================================= */
+    #gallery {
+      background: var(--off-white);
+    }
+
+    .gallery-header { text-align: center; margin-bottom: 56px; }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 200px);
+      gap: 16px;
+    }
+
+    .gallery-item {
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      background: linear-gradient(145deg, var(--olive-pale) 0%, var(--olive-muted) 100%);
+      position: relative;
+      cursor: pointer;
+      transition: transform var(--transition);
+    }
+    .gallery-item:hover { transform: scale(0.98); }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+    .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+    .gallery-item:nth-child(2) { grid-column: span 1; }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(107,124,65,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+
+    .gallery-overlay-text {
+      color: var(--white);
+      font-family: var(--font-display);
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .gallery-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: var(--olive);
+      opacity: 0.5;
+    }
+    .gallery-placeholder svg { width: 36px; height: 36px; }
+    .gallery-placeholder p {
+      font-family: var(--font-display);
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+
+    /* =============================================
+       TESTIMONIALS
+    ============================================= */
+    #testimonials {
+      background: linear-gradient(145deg, #F2F4EC 0%, #E8EDD8 100%);
+    }
+
+    .test-header { text-align: center; margin-bottom: 56px; }
+
+    .test-track-wrap {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .test-track-wrap::before, .test-track-wrap::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 80px;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .test-track-wrap::before {
+      right: 0;
+      background: linear-gradient(to left, #E8EDD8, transparent);
+    }
+    .test-track-wrap::after {
+      left: 0;
+      background: linear-gradient(to right, #E8EDD8, transparent);
+    }
+
+    .test-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .test-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 28px 26px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    .test-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
+    }
+
+    .test-stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 14px;
+    }
+    .test-stars svg {
+      width: 18px; height: 18px;
+      fill: #E8B84B;
+      color: #E8B84B;
+    }
+
+    .test-quote {
+      font-size: 0.95rem;
+      color: var(--ink-muted);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .test-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-top: 1px solid var(--accent-sand);
+      padding-top: 16px;
+    }
+
+    .test-avatar {
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      background: var(--olive-pale);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--olive);
+      flex-shrink: 0;
+    }
+
+    .test-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--ink);
+    }
+    .test-date {
+      font-size: 0.75rem;
+      color: var(--ink-light);
+    }
+
+    /* =============================================
+       BOOKING
+    ============================================= */
+    #booking {
+      background: var(--white);
+    }
+
+    .booking-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .booking-form {
+      background: var(--off-white);
+      border-radius: var(--radius-lg);
+      padding: 40px 36px;
+      border: 1.5px solid var(--accent-sand);
+    }
+
+    .form-title {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--ink);
+      margin-bottom: 28px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--ink-muted);
+      margin-bottom: 7px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid var(--accent-sand);
+      border-radius: var(--radius-sm);
+      background: var(--white);
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      color: var(--ink);
+      direction: rtl;
+      outline: none;
+      transition: border-color var(--transition);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--olive);
+      box-shadow: 0 0 0 3px rgba(107,124,65,0.1);
+    }
+
+    .form-group textarea { height: 100px; resize: none; }
+
+    .booking-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .booking-contact-intro h3 {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--ink);
+      line-height: 1.3;
+      margin-bottom: 12px;
+    }
+    .booking-contact-intro p {
+      color: var(--ink-muted);
+      font-size: 0.95rem;
+      line-height: 1.75;
+    }
+
+    .booking-contact-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .contact-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--off-white);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      border: 1.5px solid var(--accent-sand);
+      transition: var(--transition);
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .contact-card:hover {
+      border-color: var(--olive-muted);
+      background: var(--olive-pale);
+      transform: translateX(-4px);
+    }
+
+    .contact-card-icon {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-card-icon svg { width: 24px; height: 24px; }
+
+    .contact-card-icon.green { background: rgba(37,211,102,0.15); color: #25D366; }
+    .contact-card-icon.olive { background: var(--olive-pale); color: var(--olive); }
+    .contact-card-icon.red { background: rgba(192,57,43,0.1); color: var(--accent-red); }
+    .contact-card-icon.map { background: rgba(107,124,65,0.1); color: var(--olive); }
+
+    .contact-card-text strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .contact-card-text span {
+      font-size: 0.8rem;
+      color: var(--ink-muted);
+    }
+
+    /* =============================================
+       FOOTER
+    ============================================= */
+    footer {
+      background: #1C2210;
+      color: rgba(255,255,255,0.8);
+      padding: 60px 0 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+    }
+
+    .footer-brand .logo-en { color: var(--white); }
+    .footer-brand .logo-ar { color: rgba(255,255,255,0.5); }
+
+    .footer-tagline {
+      margin-top: 14px;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.7;
+      max-width: 260px;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .footer-social a {
+      width: 38px; height: 38px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+      font-size: 1rem;
+    }
+    .footer-social a:hover { background: var(--olive); }
+    .footer-social svg { width: 18px; height: 18px; fill: white; color: white; }
+
+    .footer-col h5 {
+      font-family: var(--font-display);
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 18px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+      transition: color var(--transition);
+    }
+    .footer-links a:hover { color: var(--olive-light); }
+
+    .footer-contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.65);
+    }
+    .footer-contact-item svg { width: 16px; height: 16px; flex-shrink: 0; color: var(--olive-light); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-bottom p {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* =============================================
+       FLOATING BUTTONS
+    ============================================= */
+    .floating-buttons {
+      position: fixed;
+      bottom: 100px;
+      left: 24px;
+      z-index: 900;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .float-btn {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      transition: var(--transition);
+      cursor: pointer;
+      border: none;
+      text-decoration: none;
+    }
+    .float-btn:hover { transform: scale(1.1); }
+    .float-btn svg { width: 24px; height: 24px; }
+
+    .float-wa { background: #25D366; color: white; }
+    .float-call { background: var(--olive); color: white; }
+
+    /* Sticky mobile bar */
+    .mobile-sticky-bar {
+      display: none;
+      position: fixed;
+      bottom: 0; right: 0; left: 0;
+      z-index: 900;
+      background: var(--white);
+      border-top: 1.5px solid var(--olive-muted);
+      padding: 12px 20px;
+      gap: 10px;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+    }
+
+    .mobile-sticky-bar .btn {
+      flex: 1;
+      justify-content: center;
+      font-size: 0.88rem;
+      padding: 12px 10px;
+    }
+
+    /* =============================================
+       DIVIDER / MARQUEE
+    ============================================= */
+    .marquee-strip {
+      background: var(--olive);
+      overflow: hidden;
+      padding: 14px 0;
+    }
+
+    .marquee-track {
+      display: flex;
+      gap: 40px;
+      animation: marquee 20s linear infinite;
+      width: max-content;
+    }
+
+    .marquee-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.9);
+      white-space: nowrap;
+    }
+    .marquee-item::before {
+      content: '✦';
+      color: rgba(255,255,255,0.5);
+      font-size: 0.6rem;
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* =============================================
+       SCROLL REVEAL
+    ============================================= */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =============================================
+       RESPONSIVE
+    ============================================= */
+    @media (max-width: 1024px) {
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 200px;
+      }
+      .gallery-item:nth-child(1) { grid-column: span 2; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+
+      section { padding: 64px 0; }
+
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .hero-visual { display: none; }
+      .hero-title { font-size: 2rem; }
+      .hero-stats { gap: 20px; }
+
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .about-visual { display: none; }
+
+      .services-grid { grid-template-columns: 1fr; }
+
+      .why-grid { grid-template-columns: 1fr 1fr; }
+
+      .doctors-grid { grid-template-columns: 1fr 1fr; }
+
+      .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 160px; }
+
+      .test-grid { grid-template-columns: 1fr; }
+
+      .booking-wrap { grid-template-columns: 1fr; gap: 36px; }
+
+      .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+
+      .mobile-sticky-bar { display: flex; }
+      .floating-buttons { bottom: 80px; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-ctas { flex-direction: column; }
+      .hero-ctas .btn { text-align: center; justify-content: center; }
+      .why-grid { grid-template-columns: 1fr; }
+      .doctors-grid { grid-template-columns: 1fr; }
+      .about-features { grid-template-columns: 1fr; }
+    }
+
+
+    /* ---- Real image helpers ---- */
+    .about-img-main img,
+    .doctor-avatar img,
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .doctor-avatar { overflow: hidden; }
+    .gallery-item img { position: absolute; inset: 0; }
+
+  </style>
+</head>
+<body>
+
+  <!-- =============================================
+       HEADER
+  ============================================= -->
+  <header id="header">
+    <div class="container">
+      <nav class="nav-inner">
+
+        <!-- Logo -->
+        <a href="#" class="nav-logo">
+          <div class="logo-mark">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Leaf / renewal mark -->
+              <path d="M20 6 C12 6 7 13 7 20 C7 28 13 34 20 34 C27 34 33 28 33 20 C33 13 28 6 20 6Z" fill="rgba(255,255,255,0.15)"/>
+              <path d="M14 22 C14 16 17 11 23 9 C25 16 23 24 16 27 C15 26 14 24 14 22Z" fill="rgba(255,255,255,0.9)"/>
+              <path d="M20 20 L20 32" stroke="rgba(255,255,255,0.7)" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="logo-text-wrap">
+            <span class="logo-en">RENEW</span>
+            <span class="logo-ar">رينيو كلينك</span>
+          </div>
+        </a>
+
+        <!-- Nav links -->
+        <ul class="nav-links">
+          <li><a href="#about">عن العيادة</a></li>
+          <li><a href="#services">خدماتنا</a></li>
+          <li><a href="#doctors">الفريق الطبي</a></li>
+          <li><a href="#testimonials">آراء العملاء</a></li>
+          <li><a href="#booking">اتصل بنا</a></li>
+        </ul>
+
+        <!-- CTA -->
+        <a href="#booking" class="btn btn-primary" style="font-size:0.85rem;padding:11px 24px;">احجزي موعدك</a>
+
+        <!-- Hamburger -->
+        <button class="nav-hamburger" id="hamburger" aria-label="فتح القائمة">
+          <span></span><span></span><span></span>
+        </button>
+
+      </nav>
+    </div>
+
+    <!-- Mobile nav -->
+    <div class="nav-mobile" id="mobileNav">
+      <a href="#about">عن العيادة</a>
+      <a href="#services">خدماتنا</a>
+      <a href="#doctors">الفريق الطبي</a>
+      <a href="#testimonials">آراء العملاء</a>
+      <a href="#booking">احجزي موعدك</a>
+    </div>
+  </header>
+
+
+  <!-- =============================================
+       HERO
+  ============================================= -->
+  <section id="hero">
+    <div class="hero-bg-circle hero-bg-circle-1"></div>
+    <div class="hero-bg-circle hero-bg-circle-2"></div>
+    <div class="container">
+      <div class="hero-grid">
+
+        <!-- Content -->
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="dot"></span>
+            رينيو كلينك · حولي، الكويت
+          </div>
+
+          <h1 class="hero-title">
+            جمالك الطبيعي<br />
+            <span>يبدأ من هنا</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            في رينيو كلينك نقدم أحدث خدمات الجلدية والتجميل والليزر في بيئة طبية آمنة وتجربة راقية مصممة للعناية بجمالك وثقتك.
+          </p>
+
+          <div class="hero-meta">
+            <div class="hero-meta-chip">🌿 جلدية</div>
+            <div class="hero-meta-chip">✨ تجميل</div>
+            <div class="hero-meta-chip">⚡ ليزر</div>
+          </div>
+
+          <div class="hero-ctas">
+            <a href="#booking" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              احجزي موعدك
+            </a>
+            <a href="https://wa.me/96565886161" class="btn btn-wa">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              تواصلي عبر واتساب
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div>
+              <div class="hero-stat-num">+5K</div>
+              <div class="hero-stat-label">عميلة سعيدة</div>
+            </div>
+            <div>
+              <div class="hero-stat-num">+12</div>
+              <div class="hero-stat-label">خدمة طبية</div>
+            </div>
+            <div>
+              <div class="hero-stat-num">98%</div>
+              <div class="hero-stat-label">رضا العملاء</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual -->
+        <div class="hero-visual">
+          <div class="hero-card-stack">
+            <div class="hero-main-card">
+              <div class="clinic-logo-hero">
+                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M40 10 C24 10 14 22 14 38 C14 54 25 68 40 68 C55 68 66 54 66 38 C66 22 56 10 40 10Z" fill="rgba(255,255,255,0.12)"/>
+                  <path d="M28 42 C28 30 34 20 46 16 C50 28 47 46 32 52 C30 49 28 46 28 42Z" fill="rgba(255,255,255,0.95)"/>
+                  <path d="M40 38 L40 62" stroke="rgba(255,255,255,0.6)" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="hero-card-clinic-name">
+                <h2>RENEW <span>رينيو كلينك</span></h2>
+              </div>
+              <div class="hero-card-tag">للجلدية والتجميل والليزر</div>
+              <div class="hero-card-location">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                حولي – الكويت
+              </div>
+            </div>
+
+            <!-- Floating badges -->
+            <div class="hero-floating-badge hero-floating-badge-1">
+              <div class="floating-badge-icon">⚡</div>
+              <div class="floating-badge-text">
+                <strong>تقنيات الليزر</strong>
+                <span>أحدث الأجهزة الطبية</span>
+              </div>
+            </div>
+            <div class="hero-floating-badge hero-floating-badge-2">
+              <div class="floating-badge-icon">🌿</div>
+              <div class="floating-badge-text">
+                <strong>نتائج طبيعية</strong>
+                <span>بيد خبراء متخصصين</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee strip -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span class="marquee-item">الجلدية العلاجية</span>
+      <span class="marquee-item">علاج التصبغات</span>
+      <span class="marquee-item">الليزر</span>
+      <span class="marquee-item">البوتوكس والفيلر</span>
+      <span class="marquee-item">تجديد البشرة</span>
+      <span class="marquee-item">علاج آثار الحبوب</span>
+      <span class="marquee-item">العناية المتقدمة</span>
+      <span class="marquee-item">رينيو كلينك · حولي الكويت</span>
+
+      <!-- Duplicate for seamless loop -->
+      <span class="marquee-item">الجلدية العلاجية</span>
+      <span class="marquee-item">علاج التصبغات</span>
+      <span class="marquee-item">الليزر</span>
+      <span class="marquee-item">البوتوكس والفيلر</span>
+      <span class="marquee-item">تجديد البشرة</span>
+      <span class="marquee-item">علاج آثار الحبوب</span>
+      <span class="marquee-item">العناية المتقدمة</span>
+      <span class="marquee-item">رينيو كلينك · حولي الكويت</span>
+    </div>
+  </div>
+
+
+  <!-- =============================================
+       ABOUT
+  ============================================= -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid reveal">
+
+        <!-- Visual -->
+        <div class="about-visual">
+          <div class="about-img-main" style="padding:0;">
+            <img
+              src="https://images.unsplash.com/photo-1629909615184-74f495363b67?w=800&q=80&fit=crop"
+              alt="استقبال عيادة رينيو كلينك الراقي"
+              loading="lazy"
+            />
+          </div>
+          <div class="about-img-accent">
+            <div class="num">+5</div>
+            <div class="lbl">سنوات من الخبرة الطبية في الكويت</div>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div>
+          <span class="section-eyebrow">عن رينيو كلينك</span>
+          <h2 class="section-title">عيادة طبية راقية تُعنى بجمالك وصحة بشرتك</h2>
+          <p class="section-subtitle">
+            رينيو كلينك وجهة متخصصة في الجلدية والتجميل والليزر تجمع بين أحدث التقنيات الطبية وأرقى معايير الرعاية. نؤمن بأن كل عميلة تستحق تجربة فريدة ونتائج تعكس جمالها الطبيعي.
+          </p>
+
+          <div class="about-features">
+            <div class="about-feature-item">
+              <div class="about-feature-dot"></div>
+              <div class="about-feature-text">
+                <strong>أحدث الأجهزة الطبية</strong>
+                <span>تقنيات معتمدة عالمياً</span>
+              </div>
+            </div>
+            <div class="about-feature-item">
+              <div class="about-feature-dot"></div>
+              <div class="about-feature-text">
+                <strong>فريق متخصص</strong>
+                <span>أطباء ذوو خبرة عالية</span>
+              </div>
+            </div>
+            <div class="about-feature-item">
+              <div class="about-feature-dot"></div>
+              <div class="about-feature-text">
+                <strong>معايير السلامة</strong>
+                <span>بروتوكولات طبية صارمة</span>
+              </div>
+            </div>
+            <div class="about-feature-item">
+              <div class="about-feature-dot"></div>
+              <div class="about-feature-text">
+                <strong>نتائج طبيعية</strong>
+                <span>تُبرز جمالك الأصيل</span>
+              </div>
+            </div>
+            <div class="about-feature-item">
+              <div class="about-feature-dot"></div>
+              <div class="about-feature-text">
+                <strong>تجربة مريحة</strong>
+                <span>جو هادئ واحترافي</span>
+              </div>
+            </div>
+            <div class="about-feature-item">
+              <div class="about-feature-dot"></div>
+              <div class="about-feature-text">
+                <strong>متابعة ما بعد الجلسة</strong>
+                <span>دعم متواصل لعيداتنا</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="#booking" class="btn btn-primary" style="margin-top:32px;">احجزي موعدك</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       SERVICES
+  ============================================= -->
+  <section id="services">
+    <div class="container">
+      <div class="services-header reveal">
+        <span class="section-eyebrow">خدماتنا</span>
+        <h2 class="section-title">ما نقدمه لكِ في رينيو كلينك</h2>
+        <p class="section-subtitle" style="margin:0 auto;">نوفر طيفاً متكاملاً من الخدمات الطبية التجميلية والعلاجية بأعلى معايير الجودة.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg class="si" viewBox="0 0 24 24" fill="none" stroke="#6B7C41" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="service-card-title">الجلدية العلاجية</div>
+          <p class="service-card-desc">تشخيص وعلاج كافة أمراض الجلد بأيدي أطباء متخصصين وبروتوكولات طبية معتمدة.</p>
+          <div class="service-card-arrow">
+            استفسري الآن
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg class="si" viewBox="0 0 24 24" fill="none" stroke="#6B7C41" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          </div>
+          <div class="service-card-title">الليزر</div>
+          <p class="service-card-desc">أحدث تقنيات الليزر لإزالة الشعر، تجديد البشرة، وعلاج الأوعية الدموية الظاهرة.</p>
+          <div class="service-card-arrow">
+            استفسري الآن
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg class="si" viewBox="0 0 24 24" fill="none" stroke="#6B7C41" stroke-width="2" stroke-linecap="round"><path d="M4.5 12.5L8 16l11.5-11"/></svg>
+          </div>
+          <div class="service-card-title">البوتوكس والفيلر</div>
+          <p class="service-card-desc">حقن البوتوكس والفيلر بيد متخصصين لنتائج طبيعية وجمال مُعزَّز بدون مبالغة.</p>
+          <div class="service-card-arrow">
+            استفسري الآن
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg class="si" viewBox="0 0 24 24" fill="none" stroke="#6B7C41" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+          </div>
+          <div class="service-card-title">تجديد البشرة</div>
+          <p class="service-card-desc">بروتوكولات متقدمة لتجديد خلايا البشرة وإشراق البشرة واسترداد حيويتها وشبابها.</p>
+          <div class="service-card-arrow">
+            استفسري الآن
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg class="si" viewBox="0 0 24 24" fill="none" stroke="#6B7C41" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <div class="service-card-title">علاج التصبغات</div>
+          <p class="service-card-desc">حلول متخصصة لعلاج الكلف، التصبغات، والبقع الداكنة لبشرة موحدة اللون ومتألقة.</p>
+          <div class="service-card-arrow">
+            استفسري الآن
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg class="si" viewBox="0 0 24 24" fill="none" stroke="#6B7C41" stroke-width="2" stroke-linecap="round"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div class="service-card-title">علاج آثار الحبوب</div>
+          <p class="service-card-desc">تقنيات فعّالة لتخفيف وإزالة آثار الحبوب والندبات لبشرة ناعمة ومستوية.</p>
+          <div class="service-card-arrow">
+            استفسري الآن
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg class="si" viewBox="0 0 24 24" fill="none" stroke="#6B7C41" stroke-width="2" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <div class="service-card-title">العناية المتقدمة بالبشرة</div>
+          <p class="service-card-desc">جلسات مخصصة تجمع بين التحليل الدقيق للبشرة وعلاجات مكثفة تلائم احتياجاتك.</p>
+          <div class="service-card-arrow">
+            استفسري الآن
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       WHY CHOOSE
+  ============================================= -->
+  <section id="why">
+    <div class="container">
+      <div class="why-header reveal">
+        <span class="section-eyebrow">لماذا رينيو</span>
+        <h2 class="section-title">لماذا تختارين رينيو كلينك؟</h2>
+        <p class="section-subtitle" style="margin:0 auto;">نتميز بما يجعل تجربتك معنا فريدة وموثوقة.</p>
+      </div>
+
+      <div class="why-grid">
+
+        <div class="why-card reveal">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#6B7C41" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          </div>
+          <div class="why-title">تقنيات حديثة</div>
+          <p class="why-desc">نستثمر في أحدث الأجهزة الطبية المعتمدة عالمياً لضمان أفضل النتائج.</p>
+        </div>
+
+        <div class="why-card reveal">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#6B7C41" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+          </div>
+          <div class="why-title">نتائج طبيعية</div>
+          <p class="why-desc">فلسفتنا تعزيز جمالك الطبيعي، لا تغييره. نتائج ذكية وأنيقة.</p>
+        </div>
+
+        <div class="why-card reveal">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#6B7C41" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          </div>
+          <div class="why-title">خصوصية وراحة</div>
+          <p class="why-desc">بيئة هادئة وآمنة تحترم خصوصيتك وتمنحك تجربة راقية وحميمة.</p>
+        </div>
+
+        <div class="why-card reveal">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#6B7C41" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <div class="why-title">أطباء متخصصون</div>
+          <p class="why-desc">فريقنا من أطباء الجلدية والتجميل يحملون أعلى المؤهلات والخبرات الدولية.</p>
+        </div>
+
+        <div class="why-card reveal">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#6B7C41" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 13.82a19.79 19.79 0 01-3.07-8.67A2 2 0 011.95 3h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 10.9a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div class="why-title">متابعة بعد الجلسات</div>
+          <p class="why-desc">دعم مستمر وتواصل دائم لمتابعة نتائجك وضمان رضاك التام.</p>
+        </div>
+
+        <div class="why-card reveal">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#6B7C41" stroke-width="2" stroke-linecap="round"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          </div>
+          <div class="why-title">سهولة الحجز</div>
+          <p class="why-desc">احجزي موعدك عبر الهاتف أو واتساب بسهولة تامة وبدون تعقيد.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       DOCTORS
+  ============================================= -->
+  <section id="doctors">
+    <div class="container">
+      <div class="doctors-header reveal">
+        <span class="section-eyebrow">الفريق الطبي</span>
+        <h2 class="section-title">أطباؤنا المتخصصون</h2>
+        <p class="section-subtitle" style="margin:0 auto;">فريق من المتخصصين المؤهلين الذين يجمعون بين العلم والخبرة والرعاية الصادقة.</p>
+      </div>
+
+      <div class="doctors-grid">
+
+        <div class="doctor-card reveal">
+          <div class="doctor-avatar">
+            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&q=80&fit=crop&crop=faces" alt="طبيبة استشارية أولى" loading="lazy" />
+          </div>
+          <div class="doctor-info">
+            <span class="doctor-badge">استشاري أول</span>
+            <div class="doctor-name">الطاقم الطبي</div>
+            <div class="doctor-title">استشاري الجلدية والتجميل</div>
+          </div>
+        </div>
+
+        <div class="doctor-card reveal">
+          <div class="doctor-avatar">
+            <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=600&q=80&fit=crop&crop=faces" alt="أخصائي ليزر وجلدية" loading="lazy" />
+          </div>
+          <div class="doctor-info">
+            <span class="doctor-badge">متخصص ليزر</span>
+            <div class="doctor-name">الفريق الطبي</div>
+            <div class="doctor-title">أخصائي الليزر والجلدية</div>
+          </div>
+        </div>
+
+        <div class="doctor-card reveal">
+          <div class="doctor-avatar">
+            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=600&q=80&fit=crop&crop=faces" alt="أخصائية طب تجميلي" loading="lazy" />
+          </div>
+          <div class="doctor-info">
+            <span class="doctor-badge">طب تجميلي</span>
+            <div class="doctor-name">الكادر المتخصص</div>
+            <div class="doctor-title">أخصائي التجميل والحقن</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       GALLERY
+  ============================================= -->
+  <section id="gallery">
+    <div class="container">
+      <div class="gallery-header reveal">
+        <span class="section-eyebrow">معرض العيادة</span>
+        <h2 class="section-title">بيئة راقية تعكس معاييرنا</h2>
+        <p class="section-subtitle" style="margin:0 auto;">صُممت رينيو كلينك لتمنحك شعوراً بالراحة والثقة منذ لحظة دخولك.</p>
+      </div>
+
+      <div class="gallery-grid reveal">
+
+        <div class="gallery-item">
+          <img src="ChatGPT Image Jun 14, 2026, 12_04_54 AM.png" alt="منطقة الاستقبال الفاخرة" loading="lazy" />
+          <div class="gallery-overlay"><div class="gallery-overlay-text">الاستقبال</div></div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="1db256909a04196744b5742db87a070e.jpg" alt="غرفة علاج مودرن" loading="lazy" />
+          <div class="gallery-overlay"><div class="gallery-overlay-text">غرفة العلاج</div></div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="a8e56583f46acc75434f59efec29f134.jpg" alt="جهاز ليزر طبي" loading="lazy" />
+          <div class="gallery-overlay"><div class="gallery-overlay-text">أجهزة الليزر</div></div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800&q=80&fit=crop" alt="بيئة العيادة النظيفة" loading="lazy" />
+          <div class="gallery-overlay"><div class="gallery-overlay-text">بيئة العيادة</div></div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="ChatGPT Image Jun 14, 2026, 12_06_06 AM.png" alt="منطقة الانتظار الأنيقة" loading="lazy" />
+          <div class="gallery-overlay"><div class="gallery-overlay-text">منطقة الانتظار</div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       TESTIMONIALS
+  ============================================= -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="test-header reveal">
+        <span class="section-eyebrow">آراء عيداتنا</span>
+        <h2 class="section-title">ما تقوله عيداتنا عن تجربتهن</h2>
+        <p class="section-subtitle" style="margin:0 auto;">ثقتكم هي أجمل ما نحتفظ به في رينيو كلينك.</p>
+      </div>
+
+      <div class="test-grid reveal">
+
+        <div class="test-card">
+          <div class="test-stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="test-quote">تجربتي في رينيو كلينك كانت استثنائية من أول لحظة. الاستقبال راقي، الطاقم محترف جداً، والنتائج فاقت توقعاتي بكثير. ما شاء الله!</p>
+          <div class="test-author">
+            <div class="test-avatar">م</div>
+            <div>
+              <div class="test-name">مريم العلي</div>
+              <div class="test-date">الكويت · مايو ٢٠٢٥</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="test-card">
+          <div class="test-stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="test-quote">عالجت التصبغات عندهم وفرق واضح جداً بعد ٤ جلسات. الدكتورة شرحت لي كل شيء بالتفصيل وأحسست بالأمان طول الوقت. راح أرجع حتماً!</p>
+          <div class="test-author">
+            <div class="test-avatar">ن</div>
+            <div>
+              <div class="test-name">نورة المطيري</div>
+              <div class="test-date">الكويت · مارس ٢٠٢٥</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="test-card">
+          <div class="test-stars">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="test-quote">من أفضل العيادات اللي زرتها في الكويت. الجو نظيف ومريح، والنتائج طبيعية جداً مو مبالغ فيها. الحجز سهل وسريع عبر واتساب.</p>
+          <div class="test-author">
+            <div class="test-avatar">س</div>
+            <div>
+              <div class="test-name">سارة الرشيد</div>
+              <div class="test-date">الكويت · أبريل ٢٠٢٥</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       BOOKING
+  ============================================= -->
+  <section id="booking">
+    <div class="container">
+      <div class="booking-wrap reveal">
+
+        <!-- Contact info -->
+        <div class="booking-contact">
+          <div class="booking-contact-intro">
+            <span class="section-eyebrow">احجزي موعدك</span>
+            <h2 class="section-title">ابدئي رحلتك نحو بشرة أكثر نضارة</h2>
+            <p>تواصلي معنا الآن وسيسعد فريقنا بتحديد موعدك والإجابة على جميع استفساراتك.</p>
+          </div>
+
+          <div class="booking-contact-cards">
+
+            <a href="https://wa.me/96565886161" class="contact-card">
+              <div class="contact-card-icon green">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </div>
+              <div class="contact-card-text">
+                <strong>تواصلي عبر واتساب</strong>
+                <span>ردٌّ فوري من فريقنا</span>
+              </div>
+            </a>
+
+            <a href="tel:1886161" class="contact-card">
+              <div class="contact-card-icon olive">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 13.82a19.79 19.79 0 01-3.07-8.67A2 2 0 011.95 3h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 10.9a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              </div>
+              <div class="contact-card-text">
+                <strong>1886161</strong>
+                <span>اتصلي بنا مباشرة</span>
+              </div>
+            </a>
+
+            <div class="contact-card">
+              <div class="contact-card-icon map">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="contact-card-text">
+                <strong>حولي – الكويت</strong>
+                <span>العثور علينا بسهولة على الخريطة</span>
+              </div>
+            </div>
+
+            <a href="https://www.instagram.com/renewclinickwt" target="_blank" class="contact-card">
+              <div class="contact-card-icon" style="background:rgba(193,53,132,0.12);color:#C13584;">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </div>
+              <div class="contact-card-text">
+                <strong>@renewclinickwt</strong>
+                <span>تابعينا على إنستقرام</span>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- Booking form -->
+        <div class="booking-form">
+          <div class="form-title">احجزي موعدك الآن</div>
+
+          <div class="form-group">
+            <label>الاسم الكريم</label>
+            <input type="text" placeholder="اسمك الكريم" />
+          </div>
+
+          <div class="form-group">
+            <label>رقم الهاتف</label>
+            <input type="tel" placeholder="+965 XXXX XXXX" dir="ltr" />
+          </div>
+
+          <div class="form-group">
+            <label>الخدمة المطلوبة</label>
+            <select>
+              <option value="">اختاري الخدمة</option>
+              <option>الجلدية العلاجية</option>
+              <option>الليزر</option>
+              <option>البوتوكس والفيلر</option>
+              <option>تجديد البشرة</option>
+              <option>علاج التصبغات</option>
+              <option>علاج آثار الحبوب</option>
+              <option>العناية المتقدمة بالبشرة</option>
+              <option>استشارة عامة</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>ملاحظات أو استفسارات</label>
+            <textarea placeholder="أي تفاصيل إضافية تودين مشاركتها..."></textarea>
+          </div>
+
+          <button type="button" class="btn btn-primary" style="width:100%;justify-content:center;" onclick="alert('شكراً لك! سيتواصل معك فريقنا قريباً 🌿')">
+            إرسال الطلب
+          </button>
+
+          <p style="text-align:center;font-size:0.78rem;color:var(--ink-light);margin-top:12px;">أو تواصلي مباشرة عبر الواتساب للرد الفوري</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============================================
+       FOOTER
+  ============================================= -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <div class="nav-logo" style="gap:10px;">
+            <div class="logo-mark"><svg viewBox="0 0 40 40" fill="none"><path d="M20 6 C12 6 7 13 7 20 C7 28 13 34 20 34 C27 34 33 28 33 20 C33 13 28 6 20 6Z" fill="rgba(255,255,255,0.1)"/><path d="M14 22 C14 16 17 11 23 9 C25 16 23 24 16 27 C15 26 14 24 14 22Z" fill="rgba(255,255,255,0.9)"/><path d="M20 20 L20 32" stroke="rgba(255,255,255,0.6)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+            <div class="logo-text-wrap"><span class="logo-en">RENEW</span><span class="logo-ar">رينيو كلينك</span></div>
+          </div>
+          <p class="footer-tagline">للجلدية والتجميل والليزر في حولي، الكويت. نقدم أرقى تجارب العناية بالبشرة بأيدي متخصصين.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/renewclinickwt" target="_blank" aria-label="إنستقرام">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://wa.me/96565886161" aria-label="واتساب">
+              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Nav -->
+        <div class="footer-col">
+          <h5>التصفح السريع</h5>
+          <nav class="footer-links">
+            <a href="#about">عن العيادة</a>
+            <a href="#services">خدماتنا</a>
+            <a href="#why">لماذا رينيو</a>
+            <a href="#doctors">الفريق الطبي</a>
+            <a href="#gallery">معرض الصور</a>
+          </nav>
+        </div>
+
+        <!-- Services -->
+        <div class="footer-col">
+          <h5>خدماتنا</h5>
+          <nav class="footer-links">
+            <a href="#services">الجلدية العلاجية</a>
+            <a href="#services">الليزر</a>
+            <a href="#services">البوتوكس والفيلر</a>
+            <a href="#services">تجديد البشرة</a>
+            <a href="#services">علاج التصبغات</a>
+            <a href="#services">علاج آثار الحبوب</a>
+          </nav>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+          <h5>تواصلي معنا</h5>
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              حولي – الكويت
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 13.82a19.79 19.79 0 01-3.07-8.67A2 2 0 011.95 3h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 10.9a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              1886161
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+              @renewclinickwt
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© ٢٠٢٥ رينيو كلينك · جميع الحقوق محفوظة</p>
+        <p>للجلدية والتجميل والليزر · حولي، الكويت</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- =============================================
+       FLOATING BUTTONS
+  ============================================= -->
+  <div class="floating-buttons">
+    <a href="https://wa.me/96565886161" class="float-btn float-wa" title="واتساب" aria-label="تواصل عبر واتساب">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+    <a href="tel:1886161" class="float-btn float-call" title="اتصال" aria-label="اتصل بنا">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 13.82a19.79 19.79 0 01-3.07-8.67A2 2 0 011.95 3h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 10.9a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+    </a>
+  </div>
+
+
+  <!-- Mobile sticky bar -->
+  <div class="mobile-sticky-bar">
+    <a href="https://wa.me/96565886161" class="btn btn-wa">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      واتساب
+    </a>
+    <a href="#booking" class="btn btn-primary">احجزي موعدك</a>
+  </div>
+
+
+  <!-- =============================================
+       JAVASCRIPT
+  ============================================= -->
+  <script>
+    /* --- HEADER SCROLL --- */
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 30);
+    });
+
+    /* --- HAMBURGER --- */
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    hamburger.addEventListener('click', () => {
+      const open = mobileNav.style.display === 'flex';
+      mobileNav.style.display = open ? 'none' : 'flex';
+    });
+
+    /* Close mobile nav on link click */
+    mobileNav.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => { mobileNav.style.display = 'none'; });
+    });
+
+    /* --- SCROLL REVEAL --- */
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealEls.forEach(el => observer.observe(el));
+
+    /* --- SMOOTH SCROLL for anchors --- */
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          const offset = 80;
+          const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
